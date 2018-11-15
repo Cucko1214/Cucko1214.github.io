@@ -322,13 +322,13 @@ header {
 				height: 0;
 				border: 0.313em solid transparent; /* 5 */
 				border-bottom: none;
-				border-top-color: #efa585;
+				border-top-color: skyblue   ;
 				content: '';
 				vertical-align: middle;
 				display: inline-block;
 				position: relative;
 				right: -0.313em; /* 5 */
-			}
+			}    
 
 			/* first level */
 
@@ -424,8 +424,8 @@ header {
 					width: 3.125em; /* 50 */
 					height: 3.125em; /* 50 */
 					text-align: left;
-					text-indent: -9999px;
-					background-color: #e15a1f;
+					text-indent: -9999px;  
+					background-color:dodgerblue;
 					position: relative;
 				}
 					#nav > a:before,
