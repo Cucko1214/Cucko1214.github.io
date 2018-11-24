@@ -10,6 +10,18 @@
 ::-moz-selection { background: #999; color: #fff; text-shadow: none; }
 ::selection { background: #999; color: #fff; text-shadow: none; }
 :focus { outline-color: transparent!important; outline-style: none!important; }
+/* CENNIK */
+// sets
+
+$gl-ms         : "screen and (max-width: 23.5em)"; // up to 360px
+$gl-xs         : "screen and (max-width: 35.5em)"; // up to 568px
+$gl-sm         : "screen and (max-width: 48em)";   // max 768px
+$gl-md         : "screen and (max-width: 64em)";   // max 1024px
+$gl-lg         : "screen and (max-width: 80em)";   // max 1280px
+
+// table style
+
+
 
 html {
 	overflow-y:scroll;
@@ -26,9 +38,66 @@ body {
 	-webkit-font-smoothing: subpixel-antialiased;
 	-webkit-text-size-adjust: 100%;	
 	cursor:default;
-  background:#fff;
+  /*background:#f8f8ff;*/
+    background: #DDDDDD;
+
+}
+.disclaimer{
+font-weight: 600;
+}
+h7 {
+    font-size: 20px;
 }
 
+.prilohy {
+    
+   background-color: #AAAAAA;
+    max-width: 60%;
+    flex: 1;
+    line-height: 20 px;
+}
+.kontajner{
+     padding: 0;
+  margin: 0;
+  list-style: none;
+    border: 4px solid #DDDDDD;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
+  -webkit-flex-flow: row wrap;
+  justify-content:space-between;
+}
+.tabulka {
+ background-color:  #DDDDDD;
+   min-height: 100%;    
+}
+.tabulka table{
+   min-height: 100%;
+    background-color: #DDDDDD;
+    
+}
+
+.ccontainer{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.galler{
+
+margin: 5px;    
+    
+}
+.prilohy li {
+    background-color: #f8#AAAAAA;
+    text-align: left;
+}
+img.galler{
+    width: 300px;
+    height: 250px;
+}
 h1, h2, h3, h4, h5, h6 {
   position:relative;
   font-family: 'Titillium Web', sans-serif; 
@@ -50,6 +119,7 @@ h1 {
 }
 
 h2 {
+ 
 }
 
 h3 {
@@ -217,7 +287,7 @@ img {
 .f-hr{
   border-bottom:1px solid #CCC;
   padding:10px;
-  width:50%;
+  width:80%;
   margin:0 auto;
 }
   
@@ -274,6 +344,7 @@ header {
 .head-info {
   font-size:16px;
   line-height:22px;
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.84);
 }
 
   /* --------------------------------------------------------	*/
@@ -294,6 +365,8 @@ header {
 			font-family: 'Open Sans', sans-serif;
 			position:relative;
 			z-index: 1000;
+             box-shadow: 1px 1px 5px  rgba(0,0,0,0.75);
+
 		}
 
 			#nav > a
@@ -404,6 +477,7 @@ header {
 			.logo{
 				margin:0 auto;
 			}
+                     
 		}
 
 		@media only screen and ( max-width: 40em ) /* 640 */
@@ -412,7 +486,7 @@ header {
 			{
 				font-size: 75%; /* 12 */
 			}
-
+           
 			#nav
 			{
 				position: relative;
@@ -498,6 +572,13 @@ header {
 
 #content {
   position:relative;
+    background-color: #AAAAAA;
+    box-shadow: 10px 10px 5px 10px rgba(0,0,0,1);
+
+}
+#contentgallery{
+    position:relative;
+    background-color: #AAAAAA;
 }
 
 /* --------------------------------------------------------	*/
@@ -874,34 +955,38 @@ header {
 /*  Tables  */
 /* --------------------------------------------------------	*/
 
-table {
-  width:100%;
+/*table {
+  width:50%;
   border-radius:0px !important;
   border:0px !important;
   border-collapse:collapse !important;
+    display:inline-block;
+    height: 100%;
+    background-color: #DDDDDD;
 }
 
 th {
   color:#fff;
-  background:#fda056;
+  background: dodgerblue;
   border-radius:0px !important;
   border:1px solid #3b3b3b !important;
   font-weight:normal !important;
-  padding:15px 20px !important;
+  padding:2px 2px !important;
 }
 
 td {
-  color:#83adff;
-  background:#fb8865;
+  color:black;
+  background: white;
   border-radius:0px !important;
   border:1px solid #3b3b3b !important;
-  padding:15px 20px !important;
+  padding:10px 2px !important;
+    background-color: #DDDDDD
 }
 
 table a:hover{
   text-decoration:none;
 }
-        
+  */     
 /* --------------------------------------------------------	*/
 /*  Forms  */
 /* --------------------------------------------------------	*/
@@ -1107,13 +1192,7 @@ table a:hover{
 /*  Contact  */
 /* --------------------------------------------------------	*/
 
-#map {
-  position:relative;
-  width:100%;
-  height:270px;
-  padding:0px;
-  border:0px;
-}
+
 
 /* --------------------------------------------------------	*/
 /*  Side Bar  */
@@ -1421,104 +1500,224 @@ table a:hover{
 	background: url(../img/social-networks-2.png) no-repeat top left; 
 }
 
-/* Normal */
-.social-network.aim{ background-position: 0 0}
-.social-network.amazon{ background-position: -24px 0}
-.social-network.apple{ background-position: -48px 0}
-.social-network.behance{ background-position: -72px 0}
-.social-network.blogger{ background-position: -96px 0}
-.social-network.delicious{ background-position: -120px 0}
-.social-network.deviantart{ background-position: -144px 0}
-.social-network.digg{ background-position: -168px 0}
-.social-network.dribbble{ background-position: -192px 0}
-.social-network.ebay{ background-position: -216px 0}
-.social-network.evernote{ background-position: -240px 0}
-.social-network.facebook{ background-position: -264px 0}
-.social-network.feedburner{ background-position: -288px 0}
-.social-network.flickr{ background-position: -312px 0}
-.social-network.forrst{ background-position: -336px 0}
-.social-network.foursquare{ background-position: -360px 0}
-.social-network.github{ background-position: -384px 0}
-.social-network.google{ background-position: -408px 0}
-.social-network.gowalla{ background-position: -432px 0}
-.social-network.icq{ background-position: -456px 0}
-.social-network.itunes{ background-position: -480px 0}
-.social-network.lastfm{ background-position: -504px 0}
-.social-network.linkedin{ background-position: -528px 0}
-.social-network.meetup{ background-position: -552px 0}
-.social-network.myspace{ background-position: -576px 0}
-.social-network.newsvine{ background-position: -600px 0}
-.social-network.openid{ background-position: -624px 0}
-.social-network.paypal{ background-position: -648px 0}
-.social-network.picasa{ background-position: -672px 0}
-.social-network.pinterest{ background-position: -696px 0}
-.social-network.posterous{ background-position: -720px 0}
-.social-network.reddit{ background-position: -744px 0}
-.social-network.rss{ background-position: -768px 0}
-.social-network.skype{ background-position: -792px 0}
-.social-network.slashdot{ background-position: -816px 0}
-.social-network.soundcloud{ background-position: -840px 0}
-.social-network.stumbleupon{ background-position: -864px 0}
-.social-network.technorati{ background-position: -888px 0}
-.social-network.tumblr{ background-position: -912px 0}
-.social-network.twitter{ background-position: -936px 0}
-.social-network.viddler{ background-position: -960px 0}
-.social-network.vimeo{ background-position: -984px 0}
-.social-network.virb{ background-position: -1008px 0}
-.social-network.wordpress{ background-position: -1032px 0}
-.social-network.xing{ background-position: -1056px 0}
-.social-network.yahoo{ background-position: -1080px 0}
-.social-network.yelp{ background-position: -1104px 0}
-.social-network.youtube{ background-position: -1128px 0}
-.social-network.zerply{ background-position: -1152px 0}
 
-/* Mouseovers */
-.social-network.aim:hover,.active .social-network.aim{ background-position: 0 -24px}
-.social-network.amazon:hover,.active .social-network.amazon{ background-position: -24px -24px}
-.social-network.apple:hover,.active .social-network.apple{ background-position: -48px -24px}
-.social-network.behance:hover,.active .social-network.behance{ background-position: -72px -24px}
-.social-network.blogger:hover,.active .social-network.blogger{ background-position: -96px -24px}
-.social-network.delicious:hover,.active .social-network.delicious{ background-position: -120px -24px}
-.social-network.deviantart:hover,.active .social-network.deviantart{ background-position: -144px -24px}
-.social-network.digg:hover,.active .social-network.digg{ background-position: -168px -24px}
-.social-network.dribbble:hover,.active .social-network.dribbble{ background-position: -192px -24px}
-.social-network.ebay:hover,.active .social-network.ebay{ background-position: -216px -24px}
-.social-network.evernote:hover,.active .social-network.evernote{ background-position: -240px -24px}
-.social-network.facebook:hover,.active .social-network.facebook{ background-position: -264px -24px}
-.social-network.feedburner:hover,.active .social-network.feedburner{ background-position: -288px -24px}
-.social-network.flickr:hover,.active .social-network.flickr{ background-position: -312px -24px}
-.social-network.forrst:hover,.active .social-network.forrst{ background-position: -336px -24px}
-.social-network.foursquare:hover,.active .social-network.foursquare{ background-position: -360px -24px}
-.social-network.github:hover,.active .social-network.github{ background-position: -384px -24px}
-.social-network.google:hover,.active .social-network.google{ background-position: -408px -24px}
-.social-network.gowalla:hover,.active .social-network.gowalla{ background-position: -432px -24px}
-.social-network.icq:hover,.active .social-network.icq{ background-position: -456px -24px}
-.social-network.itunes:hover,.active .social-network.itunes{ background-position: -480px -24px}
-.social-network.lastfm:hover,.active .social-network.lastfm{ background-position: -504px -24px}
-.social-network.linkedin:hover,.active .social-network.linkedin{ background-position: -528px -24px}
-.social-network.meetup:hover,.active .social-network.meetup{ background-position: -552px -24px}
-.social-network.myspace:hover,.active .social-network.myspace{ background-position: -576px -24px}
-.social-network.newsvine:hover,.active .social-network.newsvine{ background-position: -600px -24px}
-.social-network.openid:hover,.active .social-network.openid{ background-position: -624px -24px}
-.social-network.paypal:hover,.active .social-network.paypal{ background-position: -648px -24px}
-.social-network.picasa:hover,.active .social-network.picasa{ background-position: -672px -24px}
-.social-network.pinterest:hover,.active .social-network.pinterest{ background-position: -696px -24px}
-.social-network.posterous:hover,.active .social-network.posterous{ background-position: -720px -24px}
-.social-network.reddit:hover,.active .social-network.reddit{ background-position: -744px -24px}
-.social-network.rss:hover,.active .social-network.rss{ background-position: -768px -24px}
-.social-network.skype:hover,.active .social-network.skype{ background-position: -792px -24px}
-.social-network.slashdot:hover,.active .social-network.slashdot{ background-position: -816px -24px}
-.social-network.soundcloud:hover,.active .social-network.soundcloud{ background-position: -840px -24px}
-.social-network.stumbleupon:hover,.active .social-network.stumbleupon{ background-position: -864px -24px}
-.social-network.technorati:hover,.active .social-network.technorati{ background-position: -888px -24px}
-.social-network.tumblr:hover,.active .social-network.tumblr{ background-position: -912px -24px}
-.social-network.twitter:hover,.active .social-network.twitter{ background-position: -936px -24px}
-.social-network.viddler:hover,.active .social-network.viddler{ background-position: -960px -24px}
-.social-network.vimeo:hover,.active .social-network.vimeo{ background-position: -984px -24px}
-.social-network.virb:hover,.active .social-network.virb{ background-position: -1008px -24px}
-.social-network.wordpress:hover,.active .social-network.wordpress{ background-position: -1032px -24px}
-.social-network.xing:hover,.active .social-network.xing{ background-position: -1056px -24px}
-.social-network.yahoo:hover,.active .social-network.yahoo{ background-position: -1080px -24px}
-.social-network.yelp:hover,.active .social-network.yelp{ background-position: -1104px -24px}
-.social-network.youtube:hover,.active .social-network.youtube{ background-position: -1128px -24px}
-.social-network.zerply:hover,.active .social-network.zerply{ background-position: -1152px -24px}
+#Gallery {
+  margin-top: 30px;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+background-color: red;
+}
+.gallery-item { 
+  float: left;
+  position: relative;
+  width: 20%;
+  padding-bottom: 14%;
+}
+.gallery-item:hover{   box-shadow: 0px 0px 75px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.05);
+}
+.gallery-item a {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  overflow: hidden;
+}
+.gallery-item a img {
+  width: 100%;
+}
+
+@media only screen and (max-width:480px) { 
+    /* Smartphone view: 1 tile */
+    .gallery-item {
+        width: 100%;
+        padding-bottom: 100%;
+    }
+}
+@media only screen and (max-width:650px) and (min-width:481px) { 
+    /* Tablet view: 2 tiles */
+    .gallery-item {
+        width: 50%;
+        padding-bottom: 33.3%;
+    }
+}
+@media only screen and (max-width:1050px) and (min-width:651px) { 
+    /* Small desktop / ipad view: 3 tiles */
+    .gallery-item {
+        width: 33.3%;
+        padding-bottom: 23%;
+    }
+}
+@media only screen and (max-width:1290px) and (min-width:1051px) { 
+    /* Medium desktop: 4 tiles */
+    .gallery-item {
+        width: 25%;
+        padding-bottom: 17%;
+    }
+}
+@media only screen and (max-width:2500px) and (min-width:1290px) { 
+    /* Medium desktop: 4 tiles */
+    .gallery-item {
+        width: 25%;
+        
+        padding-bottom: 17%;
+    }
+}
+
+
+/* Directly from:
+http://photoswipe.com/latest/photoswipe.css
+*/
+body.ps-active 
+{
+	-webkit-text-size-adjust: none;
+}
+body.ps-active * 
+{ 
+	-webkit-tap-highlight-color:  rgba(3, 0, 55, 0,5); 
+}
+body.ps-active *:focus 
+{ 
+	outline: 0; 
+}
+
+
+/* Document overlay */
+div.ps-document-overlay 
+{
+background-color: rgba(46, 49, 49, 0.4  );
+}
+
+
+/* Viewport */
+div.ps-viewport 
+{
+	 background-color: transparent;
+	cursor: pointer;
+}
+
+
+/* Zoom/pan/rotate layer */
+div.ps-zoom-pan-rotate{
+	background: #000;
+}
+
+
+/* Slider */
+div.ps-slider-item-loading 
+{ 
+	background: url(http://abvichico.com/images/photoswipe/photoswipe-loader.gif) no-repeat center center; 
+}
+
+
+/* Caption */
+div.ps-caption
+{ 
+	background: #000000;
+	background: -moz-linear-gradient(top, #303130 0%, #000101 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#303130), color-stop(100%,#000101));
+	border-bottom: 1px solid #42403f;
+	color: #ffffff;
+	font-size: 13px;
+	font-family: "Lucida Grande", Helvetica, Arial,Verdana, sans-serif;
+	text-align: center;
+}
+
+div.ps-caption-bottom
+{ 
+	border-top: 1px solid #42403f;
+	border-bottom: none;
+}
+
+div.ps-caption-content
+{
+	padding: 13px;
+}
+
+
+/* Toolbar */
+div.ps-toolbar
+{ 
+	background: black;
+	background: -moz-linear-gradient(top, #303130 0%, #000101 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#303130), color-stop(100%,#000101));
+	border-top: 1px solid #42403f;
+	color: #ffffff;
+	font-size: 13px;
+	font-family: "Lucida Grande", Helvetica, Arial,Verdana, sans-serif;
+	text-align: center;
+	height: 44px;
+	display: table;
+	table-layout: fixed;
+}
+
+div.ps-toolbar-top 
+{
+	border-bottom: 1px solid #42403f;
+	border-top: none;
+}
+
+div.ps-toolbar-close, div.ps-toolbar-previous, div.ps-toolbar-next, div.ps-toolbar-play
+{
+	cursor: pointer;
+	display: table-cell;
+}
+
+div.ps-toolbar div div.ps-toolbar-content
+{
+	width: 44px;
+	height: 44px;
+	margin: 0 auto 0;
+	background-image: url(http://abvichico.com/images/photoswipe/photoswipe-icons.png);
+	background-repeat: no-repeat;
+}
+
+div.ps-toolbar-close div.ps-toolbar-content
+{
+	background-position: 0 0;
+}
+
+div.ps-toolbar-previous div.ps-toolbar-content
+{
+	background-position: -44px 0;
+}
+
+div.ps-toolbar-previous-disabled div.ps-toolbar-content
+{
+	background-position: -44px -44px;
+}
+
+div.ps-toolbar-next div.ps-toolbar-content
+{
+	background-position: -132px 0;
+}
+
+div.ps-toolbar-next-disabled div.ps-toolbar-content
+{
+	background-position: -132px -44px;
+}
+
+div.ps-toolbar-play div.ps-toolbar-content
+{
+	background-position: -88px 0;
+}
+
+/* Hi-res retina display */
+@media only screen and (-webkit-min-device-pixel-ratio: 2)
+{
+	div.ps-toolbar div div.ps-toolbar-content
+	{
+		-webkit-background-size: 176px 88px;
+		background-image: url(http://abvichico.com/images/photoswipe/photoswipe-icons@2x.png);
+	}
+}
